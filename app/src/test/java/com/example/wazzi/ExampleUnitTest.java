@@ -1,4 +1,4 @@
-package com.example.socialapp;
+package com.example.wazzi;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.socialapp;
+package com.example.wazzi;
 
 import android.app.Application;
 
@@ -17,4 +17,3 @@ public class App extends Application {
         );
     }
 }
-

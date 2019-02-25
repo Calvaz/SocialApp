@@ -1,20 +1,15 @@
-package com.example.socialapp;
+package com.example.wazzi;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.parse.FindCallback;
-import com.parse.GetCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -26,9 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static java.security.AccessController.getContext;
-
-public class TweetsUsers extends AppCompatActivity implements View.OnClickListener {
+public class SendWazzi extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnSendTweet, btnShowTweets;
     private EditText edtTweet;
@@ -69,9 +62,9 @@ public class TweetsUsers extends AppCompatActivity implements View.OnClickListen
                         @Override
                         public void done(ParseException e) {
                             if (e == null) {
-                                FancyToast.makeText(TweetsUsers.this, "Tweet sent successfully.", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
+                                FancyToast.makeText(SendWazzi.this, "Tweet sent successfully.", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
                             } else {
-                                FancyToast.makeText(TweetsUsers.this, "Couldn't send tweet.", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+                                FancyToast.makeText(SendWazzi.this, "Couldn't send tweet.", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                             }
                             dialog.dismiss();
                         }
@@ -79,12 +72,12 @@ public class TweetsUsers extends AppCompatActivity implements View.OnClickListen
 
                 } catch (Exception e) {
                     if (e == null) {
-                        FancyToast.makeText(TweetsUsers.this, "Object not saved.", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+                        FancyToast.makeText(SendWazzi.this, "Object not saved.", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                     }
                 }
             case R.id.btnShowTweets:
                 final ArrayList<HashMap<String, String>> tweetList = new ArrayList<>();
-                final SimpleAdapter adapter = new SimpleAdapter(TweetsUsers.this, tweetList, android.R.layout.simple_list_item_2, new String[]{"tweetUserName", "tweetValue"}, new int[]{android.R.id.text1, android.R.id.text2});
+                final SimpleAdapter adapter = new SimpleAdapter(SendWazzi.this, tweetList, android.R.layout.simple_list_item_2, new String[]{"tweetUserName", "tweetValue"}, new int[]{android.R.id.text1, android.R.id.text2});
                 try {
                     ParseQuery<ParseObject> parseQuery = ParseQuery.getQuery("MyTweet");
                     parseQuery.whereContainedIn("user", ParseUser.getCurrentUser().getList("fanOf"));

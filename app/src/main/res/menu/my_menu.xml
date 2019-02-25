@@ -15,4 +15,11 @@
         app:showAsAction="always"
         android:title="Tweet" />
 
+    <item
+        android:id="@+id/sendMessage"
+        android:orderInCategory="100"
+        android:icon="@drawable/message"
+        app:showAsAction="always"
+        android:title="Send Message" />
+
 </menu>

@@ -1,4 +1,4 @@
-package com.example.socialapp;
+package com.example.wazzi;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -83,7 +83,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void transitionToTwitterUsers() {
-        Intent intent = new Intent(SignUp.this, TwitterUsers.class);
+        Intent intent = new Intent(SignUp.this, WazziUsers.class);
         startActivity(intent);
         finish();
     }

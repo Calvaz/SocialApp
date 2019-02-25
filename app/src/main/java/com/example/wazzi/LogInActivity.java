@@ -1,4 +1,4 @@
-package com.example.socialapp;
+package com.example.wazzi;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -71,7 +70,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
     private void transitionToTwitterUsers() {
 
-        Intent intent = new Intent(LogInActivity.this, TwitterUsers.class);
+        Intent intent = new Intent(LogInActivity.this, WazziUsers.class);
         startActivity(intent);
         finish();
     }

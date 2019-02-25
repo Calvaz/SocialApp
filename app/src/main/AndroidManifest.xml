@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.socialapp">
+    package="com.example.wazzi">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -16,10 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TweetWall"></activity>
-        <activity android:name=".TweetsUsers" />
+        <activity android:name=".WazziTexts"></activity>
+        <activity android:name=".SendWazzi" />
         <activity android:name=".SignUp" />
-        <activity android:name=".TwitterUsers" />
+        <activity android:name=".WazziUsers" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
